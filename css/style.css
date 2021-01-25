@@ -1,0 +1,955 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #1C2C40;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 400;
+	background: #fff;
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+a{
+	color: #1C2C40;
+}
+a:hover,.submit:hover{
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 400;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width:1280px;
+}
+
+@font-face {
+    font-family: 'GT-Eesti-Light';
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti-Normal';
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti-Semi_Bold';
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti-Bold';
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+::placeholder {
+  color: #C0CCDA;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #C0CCDA;
+}
+
+::-ms-input-placeholder {
+  color: #C0CCDA;
+}
+
+:root {
+  --main-bg-color: #23D3D3;
+  --main-heading-color:#1C2C40;
+}
+
+header
+{
+	height: 100px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	z-index: 1;
+}
+header div.left
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header div.left h1
+{
+	width: 150px;
+	margin-right: 40px;
+}
+header div.left h1 a
+{
+	display: block;
+}
+header div.left h1 a img
+{
+	display: block;
+	width: 100%;
+}
+header div.left ul
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header div.left ul li
+{
+	margin-right: 40px;
+}
+header div.left ul li:last-child
+{
+	margin-right: 0;
+	font-weight: 700;
+}
+header div ul li a
+{
+	letter-spacing: 0.5px;
+	font-family: 'GT-Eesti-Semi_Bold';
+}
+header div.right ul
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header div.right ul li
+{
+	margin-right: 40px;
+}
+header div.right ul li:last-child
+{
+	margin-right: 0;
+}
+header div.right ul li a.button
+{
+	padding: 15px 25px;
+	background: var(--main-bg-color);
+	border-radius: 30px;
+	color: #ffffff;
+}
+#spotlight
+{
+	padding-top: 105px;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: 1180px;
+	background-position: right 0px bottom -66px;
+	height: 680px;
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+}
+#spotlight section.container
+{
+	width: 38%;
+	padding-top: 65px;
+}
+#spotlight section.container h1
+{
+	font-size: 50px;
+	padding: 25px 0 20px;
+	font-family: 'GT-Eesti-Bold';
+}
+#spotlight section.container p
+{
+	font-size: 22px;
+	font-family: 'GT-Eesti-Normal';
+}
+#spotlight section.container a.button
+{
+	padding: 20px 50px;
+	border-radius: 35px;
+	background: var(--main-bg-color);
+	color: #ffffff;
+	font-family: 'GT-Eesti-Semi_Bold';
+	display: inline-block;
+	margin: 40px 0 15px;
+}
+#spotlight section.container div
+{
+	display: flex;
+	align-items: center;
+}
+#spotlight section.container div p
+{
+	padding: 0;
+	font-size: 15px;
+}
+#spotlight section.container div img
+{
+	margin-left: 20px;
+}
+#services {
+	position: relative;
+	z-index: 1;
+	background: #ffffff;
+}
+#services section.top
+{
+	text-align: center;
+	padding: 100px 0 0;
+	/* background: #ffffff; */
+}
+#services section.top div.icon
+{
+	width: 50px;
+	margin: 0 auto;
+}
+#services section.top div.icon img
+{
+	box-shadow: 1px 4px 7px 0 rgba(0, 0, 0, 0.5);
+	width: 100%;
+	border-radius: 50%;
+}
+#services section.top h4
+{
+	padding: 20px 0;
+	font-size: 26px;
+	font-family: 'GT-Eesti-Normal';
+	text-transform: uppercase;
+}
+#services section.top h1
+{
+	font-size: 50px;
+    padding: 25px 0 20px;
+    font-family: 'GT-Eesti-Bold';
+}
+#services section.content
+{
+	padding: 100px 0;
+	background: url(../images/whatis-bg.jpg) no-repeat;
+	background-size: 800px;
+	background-position: right center;
+}
+#services section.content div.item
+{
+	width: 350px;
+    margin-bottom: 115px;
+    margin-left: 200px;
+}
+#services section.content div.item:last-child
+{
+    margin-bottom: 0;
+}
+#services section.content div.item h4
+{
+	font-family: 'GT-Eesti-Semi_Bold';
+	font-size: 20px;
+	padding-bottom: 30px;
+}
+#services section.content div.item h4 span.label
+{	
+	padding: 5px 10px;
+	background: var(--main-bg-color);
+	border-radius: 5px;
+	margin-right: 10px;
+	font-family: 'GT-Eesti-Normal';
+	color: #fff;
+	font-size: 17px;
+}
+#services section.content div.item p
+{
+	font-family: 'GT-Eesti-Light';
+	font-size: 22px;
+}
+#services section.content div.item a.button
+{
+	margin-top: 30px;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid;
+    border-radius: 35px;
+}
+#services hr.line
+{
+	border-bottom: 0.5px dotted #CFD3D9;
+	margin: 0 20%;
+	/* padding-top: 100px; */
+}
+#middle {
+	text-align: center;
+	padding: 90px 30%;
+	position: relative;
+	z-index: 1;
+	background: #ffffff;
+}
+#middle ul
+{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/* margin: 0 auto; */
+}
+#middle ul li
+{
+	/* margin-right: 130px; */
+	width: 100px;
+}
+/* #middle ul li:last-child
+{
+	margin-right: 0;
+} */
+#middle ul li:nth-child(odd)
+{
+	margin-top: 60px;
+}
+#middle ul li a img
+{
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 0 rgba(0 , 0, 0, 0.1);
+}
+#middle h1
+{	
+	padding: 120px 0 60px;
+	font-size: 50px;
+    font-family: 'GT-Eesti-Bold';
+}
+#middle p
+{
+	font-family: 'GT-Eesti-Light';
+    font-size: 18px;
+}
+#middle hr.line
+{
+	border-bottom: 0.5px dotted #CFD3D9;
+	padding: 90px 20% 0;
+}
+#testimonial {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	background: #ffffff;
+}
+#testimonial div.container div.item p
+{
+	padding: 10px 0 60px;
+	font-size: 30px;
+	font-family: 'GT-Eesti-Bold';
+	max-width: 45%;
+	margin: 0 auto;
+}
+#testimonial div.container div.item img
+{
+	margin-bottom: 40px;
+	width: 100px;
+	border-radius: 50%;
+}
+#testimonial div.container div.item h6.name
+{
+	font-size: 18px;
+	font-family: 'GT-Eesti-Normal';
+	margin-bottom: 10px;
+}
+#testimonial div.container div.item span.address
+{
+	font-size: 18px;
+	font-family: 'GT-Eesti-Normal';
+	color: #AAB5C1;
+}
+#testimonial hr.line
+{
+	border-bottom: 0.5px dotted #CFD3D9;
+	margin: 0 20%;
+	padding-top: 100px;
+}
+#count {
+	padding: 100px 0 100px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	background: #ffffff;
+}
+#count img
+{
+	width: 25%;
+	padding-bottom: 50px ;
+}
+#count p
+{
+	font-size: 18px;
+	font-family: 'GT-Eesti-Normal';
+	color: #AAB5C1;
+	padding-bottom: 50px;
+}
+#count a.button
+{
+	padding: 15px 40px;
+	background: var(--main-bg-color);
+	color: #fff;
+	font-family: 'GT-Eesti-Semi_Bold';
+	display: inline-block;
+	border-radius: 10px;
+}
+#faq {
+	padding: 110px 0;
+	background: #EAF9FE;
+	position: relative;
+	z-index: 1;
+}
+#faq section.top h4
+{
+	font-family: 'GT-Eesti-Bold';
+    font-size: 25px;
+    padding-bottom: 30px
+}
+#faq section.content section.tab_head ul
+{
+	display: flex;
+}
+#faq section.content section.tab_head ul li
+{
+	width: 33.33%;
+	font-family: 'GT-Eesti-Bold';
+	font-size: 20px;
+	padding: 25px 50px;
+	border-bottom: 1px solid #8594A7;
+}
+#faq section.content section.tab_head ul li a
+{
+	color: #8594A7;
+}
+#faq section.content section.tab_head ul li:first-child
+{
+	border-bottom: .7px solid var(--main-bg-color);
+}
+#faq section.content section.tab_head ul li:first-child a
+{
+	color: var(--main-bg-color);
+}
+#faq section.content .tab_body div.item ul
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#faq section.content .tab_body div.item ul li
+{
+	width: 30%;
+	padding: 70px 0 0px;
+}
+#faq section.content .tab_body div.item ul li h4
+{
+	font-family: 'GT-Eesti-Semi_Bold';
+	font-size: 26px;
+}
+#faq section.content .tab_body div.item ul li p
+{
+	font-family: 'GT-Eesti-Light';
+	font-size: 18px;
+	border-bottom: 0.5px dotted #8594A7;
+	padding: 30px 0;
+}
+#faq section.bottom
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 0.5px dotted #8594A7;
+	font-family: 'GT-Eesti-Normal';
+}
+#faq section.bottom div.img_container
+{
+	width: 33%;
+}
+#faq section.bottom div.content
+{
+	width: 67%;
+	display: flex;
+	justify-content: space-between;
+}
+#faq section.bottom div.content div.items img
+{
+	width: 60px;
+	display: block;
+	margin-bottom: 20px;
+}
+#faq section.bottom div.content div.items p
+{
+	font-family: 'GT-Eesti-Normal';
+}
+#faq section.bottom div.content div.items a
+{
+	text-decoration: underline;
+	color: var(--main-bg-color);
+}
+#press {
+	padding: 0 0 110px;
+	background: #EAF9FE;
+	position: relative;
+	z-index: 1;
+}
+#press section.wrapper
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#press div.left
+{
+	width: 15%;
+}
+#press div.left h4
+{
+	font-family: 'GT-Eesti-Bold';
+    font-size: 25px;
+}
+#press div.right
+{
+	width: 85%;
+}
+#press div.right ul
+{
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#press div.right ul li
+{
+	display: flex;
+	align-items: center;
+	margin-right: 85px;
+	padding-bottom: 30px;
+}
+#press div.right ul li:nth-child(4) ,#press div.right ul li:nth-child(5)
+{
+	padding-bottom: 0;
+}
+#press div.right ul li img
+{
+	width: 100px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+#press div.right ul li span
+{
+	font-size: 20px;
+	font-family: 'GT-Eesti-Light';
+	max-width: 170px;
+}
+#promo {
+	padding: 110px 0;
+	background: var(--main-bg-color);
+	position: relative;
+	z-index: 1;
+}
+#promo div.top
+{
+	text-align: center;
+}
+#promo div.top h2
+{
+	padding: 0px 0 60px;
+    font-size: 40px;
+	font-family: 'GT-Eesti-Bold';
+	max-width: 300px;
+	margin: 0 auto;
+}
+#promo div.top a.button
+{
+	padding: 15px 50px;
+	background: #ffffff;
+	border-radius: 10px;
+	color: var(--main-bg-color);
+	font-family: 'GT-Eesti-Semi_Bold';
+}
+#promo div.bottom
+{
+	padding-top: 170px;
+}
+#promo div.bottom ul
+{
+	display: flex;
+	justify-content: space-between;
+}
+#promo div.bottom ul li
+{
+	display: flex;
+	align-items: baseline;
+}
+#promo div.bottom ul li img
+{
+	height: 15px;
+	margin-right: 20px;
+}
+#promo div.bottom ul li small
+{
+	font-family: 'GT-Eesti-Light';
+	font-size: 16px;
+	color: var(--main-heading-color);
+	max-width: 180px;
+	/* padding-bottom: 10px; */
+	line-height: 3em;
+}
+#promo div.bottom ul li small:first-line
+{
+	line-height: 0;
+}
+footer {
+	padding: 110px 0;
+	background: var(--main-heading-color);
+	color: #A7B3C2;
+	position: relative;
+	z-index: 1;
+}
+footer section.top
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+footer section.top div.item_large
+{
+	width: 22%;
+}
+footer section.top div.item_large img
+{
+	width: 105px;
+	margin-bottom: 17px;
+}
+footer section.top div.item_large p
+{
+	font-family: 'GT-Eesti-Light';
+    font-size: 15px;
+}
+footer section.top div.item
+{
+ width: 22%;
+}
+footer section.top div.item h3
+{
+	margin-bottom: 30px;
+	font-family: 'GT-Eesti-Semi_Bold';
+    font-size: 20px;
+}
+footer section.top div.item ul li
+{
+	line-height: 1.7em;
+}
+footer section.top div.item ul li a
+{
+	color: #A7B3C2;
+	font-family: 'GT-Eesti-Light';
+    font-size: 15px;
+}
+footer section.top div.item p
+{
+	font-family: 'GT-Eesti-Light';
+	font-size: 15px;
+	margin-bottom: 30px;
+}
+footer section.top div.item form
+{
+	padding: 15px 20px;
+	background: #3D4958;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+}
+footer section.top div.item form input
+{
+	font-family: 'GT-Eesti-Light';
+	font-size: 15px;
+	color: #fff;
+}
+footer section.top div.item form button
+{
+	width: 15px;
+}
+footer section.top div.item form button img
+{
+	width: 100%;
+	transform: rotate(270deg);
+}
+footer section.bottom
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 120px;
+}
+footer section.bottom div.left p
+{
+	color: #758497;
+	font-size: 14px;
+	font-family: 'GT-Eesti-Light';
+	max-width: 350px;
+}
+footer section.bottom div.left p a
+{
+	color: var(--main-bg-color);
+}
+footer section.bottom div.left p a:hover
+{
+	font-size: 16px;
+	font-family: 'GT-Eesti-Normal';
+	text-decoration: underline;
+	transition-duration: 1s;
+	transition-delay: 0.5s;
+}
+footer section.bottom div.right a
+{
+	margin-right: 20px;
+}
+footer section.bottom div.right a img
+{
+	width: 17px;
+}
+footer section.bottom div.right a img:last-child
+{
+	margin-right: 0;
+}
+#mask
+{
+	height: 100vh;
+	position: relative;
+	z-index: -2;
+}
+#cover
+{
+	height: 100vh;
+	background: url(../images/mobile-devices-bg-2.jpg) no-repeat;
+	background-size: contain;
+	padding: 80px;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#cover h2 {
+	margin-left: 50%;
+    font-size: 40px;
+	font-family: 'GT-Eesti-Bold';
+	max-width: 370px;
+	line-height: 1.5em;
+	margin-bottom: 35px;
+}
+#cover p {
+	margin-left: 50%;
+	font-family: 'GT-Eesti-Light';
+	font-size: 15px;
+	max-width: 350px;
+	line-height: 1.6em;
+	margin-bottom: 35px;
+}
+#cover a {
+	margin-left: 50%;
+	background: #1F3041;
+	padding: 15px 30px;
+	font-size: 20px;
+	color: #fff;
+	display: inline-block;
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+	align-items: center;
+	border-radius: 10px;
+}
+#cover a span {
+	font-size: 20px;
+	font-family: 'GT-Eesti-Bold';
+}
+#cover a img {
+	width: 30px;
+}
+
+
+@media all and (max-width: 1318px) {
+	#spotlight {
+		background-size: 1000px;
+	}
+	#services section.content div.item p {
+		font-size: 18px;
+	}
+}
+
+
+@media all and (max-width: 1280px) {
+	header div.left ul {
+		display: none;
+	}
+	#spotlight {
+		background: #ffffff;
+	}
+	#spotlight section.container {
+		width: 100%;
+	}
+	#services section.content {
+		background: #ffffff;
+	}
+	#middle {
+		padding: 90px 18%
+	}
+    #testimonial div.container div.item p {
+		max-width: 55%;
+	}
+	#press div.right ul li img {
+		width: 50px;
+	}
+	#press div.right ul li span {
+		font-size: 17px;
+	}
+	#press div.left h4 {
+		font-size: 20px;
+	}
+	#services section.top {
+		padding: 0px 0 0;
+	}
+}
+
+
+@media all and (max-width: 980px) {
+	#spotlight {
+		padding-top:20px
+	}
+	#spotlight section.container {
+		padding-top: 0px;
+	}
+	#middle ul li {
+		width: 80px;
+	}
+	#middle h1 {
+		padding: 80px 0 45px;
+		font-size: 40px;
+	}
+	#testimonial div.container div.item p {
+		max-width: 66%;
+	}
+	#press div.right ul li img {
+		width: 30px;
+	}
+	#press div.right ul li span {
+		font-size: 13px;
+	}
+	#press div.left h4 {
+    	font-size: 16px;
+	}
+	#faq section.content .tab_body div.item ul li p {
+		font-size: 15px;
+	}
+	faq section.top h4 {
+		font-size: 20px;
+	}
+	#faq section.content section.tab_head ul li {
+		font-size: 15px;
+	}
+	#faq section.content .tab_body div.item ul li p {
+		font-size: 15px;
+	}
+	#faq section.content .tab_body div.item ul li h4 {
+		font-size: 14px;
+	}
+	#faq section.bottom div.img_container img{
+		width: 60%;
+	}
+	#faq section.bottom div.content div.items a {
+		font-size: 13px;
+	}
+	#faq section.bottom div.content div.items p {
+		font-size: 12px;
+	}
+	#faq section.bottom div.content div.items img {
+		width: 40px;
+		margin-bottom: 10px;
+	}
+	#spotlight {
+		height: 450px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
